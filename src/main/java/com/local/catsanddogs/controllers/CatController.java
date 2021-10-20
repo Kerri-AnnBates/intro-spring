@@ -13,7 +13,7 @@ public class CatController {
     @Autowired
     private CatRepository catRepos;
 
-    @GetMapping(value = "/cats", produces={"application/json"})
+    @GetMapping(value = "/cats", produces = {"application/json"})
     public ResponseEntity<?> findAllCats() {
         return new ResponseEntity<>(catRepos.findAll(), HttpStatus.OK);
     }
